@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>ショップ向け 無料ホームページテンプレート tp_shop8</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/inview.css">
+<script src="js/openclose.js"></script>
+<script src="js/ddmenu_min.js"></script>
+<script src="js/fixmenu_pagetop.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!--[if lt IE 10]>
+<style>
+.up, .left, .right, .transform1, .transform2 {opacity:1;}
+.upstyle, .leftstyle, .rightstyle, .transform1style, .transform2style {transition: 0s 0s;}
+.up {bottom: 0px;}
+.left {left: 0px;}
+.right {right: 0px;}
+.transform1 {transform: scaleX(1);}
+</style>
+<![endif]-->
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+<h1 id="logo"><a href="index"><img src="images/logo.png" alt="Sample Online Shop"></a></h1>
+<p class="cart"><a href="#"><img src="images/icon_cart.png" alt="カート"></a></p>
+</header>
+
+<!--PC用（801px以上端末）メニュー-->
+<nav id="menubar">
+<ul>
+<li><a href="index">HOME</a></li>
+<li><a href="about">ABOUT</a></li>
+<li><a href="shopping">SHOPPING</a>
+    <ul class="ddmenu">
+	<li><a href="shopping2">商品グループ1</a></li>
+	<li><a href="shopping2">商品グループ2</a></li>
+	<li><a href="shopping2">商品グループ3</a></li>
+	<li><a href="shopping2">商品グループ4</a></li>
+	</ul>
+</li>
+<li><a href="faq">FAQ</a></li>
+<li><a href="contact">CONTACT</a></li>
+</ul>
+</nav>
+<!--小さな端末用（800px以下端末）メニュー-->
+<nav id="menubar-s">
+<ul>
+<li><a href="index">HOME</a></li>
+<li><a href="about">ABOUT</a></li>
+<li><a href="shopping">SHOPPING</a></li>
+<li><a href="faq">FAQ</a></li>
+<li><a href="contact">CONTACT</a></li>
+</ul>
+</nav>
+
+<div id="contents">
+
+<div id="main">
+
+<section>
+
+<h2>アニメーション（transform）の使い方</h2>
+
+<p>当ページの写真が動くアニメーション効果は「jquery.inview.js」を使っています。※IE10以上で動作します。<br>
+IE9以下だと挙動がおかしくなる(微妙に動いたり見えなかったりする)ので、一通りリセット(固定表示)しています。リセットスタイルは各ページのheadタグ内に入っています。</p>
+<p>アニメーションのスタイルは、cssフォルダのinview.cssで調整できます。<br>
+自作アニメーションを作って適用する場合、jquery.inview_set.jsへの追加も忘れず行って下さい。</p>
+<p><strong style="color:red">※アニメーションを使う場合は、「jquery.inview.js」を入手して下さい。</strong><br>
+テンプレートのダウンロード直後の状態ではアニメーションは動きません。必ず<a href="https://template-party.com/file/inview.html" target="_blank">マニュアル</a>をご覧頂き、ファイルを入手して下さい。ファイルは簡単に入手できます。</p>
+<p><strong style="color:red">※アニメーションを使わず、通常の固定表示にする場合。</strong><br>
+html下部にある、<br>
+<strong class="look">&lt;!--パララックス用ファイル読み込み--&gt;<br>
+&lt;script src=&quot;js/jquery.inview.js&quot;&gt;&lt;/script&gt;<br>
+&lt;script src=&quot;js/jquery.inview_set.js&quot;&gt;&lt;/script&gt;</strong><br>
+の３行を削除。<br>
+続いて、html冒頭head内にある、<br>
+<strong class="look">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/inview.css&quot;&gt;</strong><br>
+の１行を削除して下さい。</p>
+
+<h3>通常表示の例</h3>
+<p>&lt;div class=&quot;list&quot;&gt;のみ指定した場合。</p>
+
+<div class="list">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<div class="list">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<div class="list">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<div class="list">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<h3>class=&quot;transform2&quot;の例</h3>
+<p>&lt;div class=&quot;list <span class="color1">transform2</span>&quot;&gt;と指定した場合。</p>
+
+<div class="list transform2">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<div class="list transform2">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<div class="list transform2">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<div class="list transform2">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<h3>class=&quot;up&quot;の例</h3>
+<p>&lt;div class=&quot;list <span class="color1">up</span>&quot;&gt;と指定した場合。</p>
+
+<div class="list up">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<div class="list up">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<div class="list up">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<div class="list up">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<h3>class=&quot;left&quot;の例</h3>
+<p>&lt;div class=&quot;list <span class="color1">left</span>&quot;&gt;と指定した場合。</p>
+
+<div class="list left">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<div class="list left">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<div class="list left">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<div class="list left">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<h3>class=&quot;right&quot;の例</h3>
+<p>&lt;div class=&quot;list <span class="color1">right</span>&quot;&gt;と指定した場合。</p>
+
+<div class="list right">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<div class="list right">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<div class="list right">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<div class="list right">
+<a href="item">
+<figure><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<h3>画像など個別の要素に対しての直接指定も可</h3>
+<p>それぞれ、<br>
+&lt;figure class=&quot;<span class="color1">transform1</span>&quot;&gt;<br>
+&lt;figure class=&quot;<span class="color1">transform2</span>&quot;&gt;<br>
+&lt;figure class=&quot;<span class="color1">up</span>&quot;&gt;<br>
+と指定しています。</p>
+
+<div class="list">
+<a href="item">
+<figure class="transform1"><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<div class="list">
+<a href="item">
+<figure class="transform2"><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+<div class="list">
+<a href="item">
+<figure class="up"><img src="images/sample1.jpg" alt="商品名"></figure>
+<h4>商品名<br>1,800円</h4>
+<p>商品の簡単な説明をここに入れます。</p>
+</a>
+</div>
+
+</section>
+
+</div>
+<!--/#main-->
+
+<div id="sub">
+
+<nav class="box1">
+<h2>Menu</h2>
+<ul class="submenu">
+<li><a href="company">会社概要</a></li>
+<li><a href="link">リンク</a></li>
+<li><a href="#">メニュー</a></li>
+<li><a href="#">メニュー</a></li>
+<li><a href="#">メニュー</a></li>
+</ul>
+</nav>
+
+<section class="box1">
+
+<h2>おすすめ商品</h2>
+
+    <div class="list-sub">
+    <a href="item">
+    <figure><img src="images/sample1.jpg" alt="商品名"></figure>
+    <h4>商品名<br>1,800円</h4>
+    <p>商品の簡単な説明をここに入れます。</p>
+    </a>
+    </div>
+    
+    <div class="list-sub">
+    <a href="item">
+    <figure><img src="images/sample1.jpg" alt="商品名"></figure>
+    <h4>商品名<br>1,800円</h4>
+    <p>商品の簡単な説明をここに入れます。</p>
+    </a>
+    </div>
+    
+    <div class="list-sub">
+    <a href="item">
+    <figure><img src="images/sample1.jpg" alt="商品名"></figure>
+    <h4>商品名<br>1,800円</h4>
+    <p>商品の簡単な説明をここに入れます。</p>
+     <span class="option1">PICK UP</span>
+   </a>
+    </div>
+    
+    <div class="list-sub option2">
+    <a href="item">
+    <figure><img src="images/sample1.jpg" alt="商品名"></figure>
+    <h4>商品名<br>1,800円</h4>
+    <p>商品の簡単な説明をここに入れます。</p>
+    <span class="option2">SOLD OUT</span>
+    </a>
+    </div>
+
+</section>
+
+<section class="box1">
+<h2 class="mb15">営業日カレンダー</h2>
+<p class="c"><img src="images/sample_cal.png" alt="カレンダー"><br>
+<a href="https://template-party.com/free_program/program1.html" target="_blank">カレンダープログラム無料配布中です。</a></p>
+</section>
+
+<section class="box1">
+<h2>Access</h2>
+<p><strong>TEL:00-0000-0000</strong><br>
+<span class="mini1">受付：00:00〜00:00<br>
+定休日：水曜日</span></p>
+</section>
+
+</div>
+<!--/#sub-->
+
+</div>
+<!--/#contents-->
+
+</div>
+<!--/#container-->
+
+<footer>
+
+<div id="footermenu">
+<ul>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+</ul>
+<ul>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+</ul>
+<ul>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+</ul>
+<ul>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+</ul>
+<ul>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">メニューサンプル</a></li>
+</ul>
+</div>
+<!--/#footermenu-->
+
+<div id="copyright">
+<small>Copyright&copy; <a href="index">SAMPLE SHOP</a> All Rights Reserved.</small>
+<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+</div>
+
+</footer>
+
+<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+
+<!--メニュー開閉ボタン-->
+<div id="menubar_hdr" class="close"></div>
+<!--メニューの開閉処理条件設定　800px以下-->
+<script>
+if (OCwindowWidth() <= 800) {
+	open_close("menubar_hdr", "menubar-s");
+}
+</script>
+
+</body>
+</html>
